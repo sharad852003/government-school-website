@@ -1,0 +1,774 @@
+:root {
+    /* Primary Colors */
+    --primary: #2b6cb0;  /* Calm, trustworthy blue */
+    --primary-light: #4299e1; /* Lighter blue for accents */
+    --primary-dark: #2c5282; /* Darker blue for contrast */
+    
+    /* Secondary Colors */
+    --secondary: #553c9a; /* Deep purple for sophistication */
+    --accent: #38a169;   /* Natural green for growth/education */
+    
+    /* Neutral Colors */
+    --light: #f7fafc;    /* Very light gray for backgrounds */
+    --light-gray: #edf2f7; /* Light gray for cards */
+    --dark: #1a365d;     /* Deep navy for text */
+    
+    /* Text Colors */
+    --text: #2d3748;     /* Dark gray for body text */
+    --text-light: #718096; /* Medium gray for secondary text */
+    
+    /* Gradients */
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    --subtle-gradient: linear-gradient(to right, var(--primary-light), var(--accent));
+  }
+  /* Base Styles */
+  .ankur-publication {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    background-color: #ffffff;
+  }
+  
+  /* Cover Section - Modern Hero Style */
+  .cover-section {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding: 3rem;
+    background: var(--gradient);
+    border-radius: 16px;
+    color: white;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cover-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  }
+  
+  .cover-image {
+    flex: 1;
+    max-width: 280px;
+    z-index: 1;
+    transform: perspective(1000px) rotateY(-10deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border: 4px solid white;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .cover-image:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.05);
+  }
+  
+  .cover-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+  }
+  
+  .cover-details {
+    flex: 2;
+    z-index: 1;
+  }
+  
+  .cover-details h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .cover-details .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+  }
+  
+  .meta-info {
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+  }
+  
+  .meta-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+  }
+  
+  /* Tabs Navigation - Glass Morphism */
+  .publication-tabs {
+    display: inline-flex;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .tab-btn {
+    padding: 0.75rem 1.75rem;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-light);
+  }
+  
+  .tab-btn:hover {
+    color: var(--primary);
+    background: rgba(37, 99, 235, 0.1);
+  }
+  
+  .tab-btn.active {
+    background: var(--gradient);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3), 
+                0 2px 4px -1px rgba(37, 99, 235, 0.2);
+  }
+  
+  /* Content Sections */
+  .publication-content {
+    min-height: 500px;
+    padding: 1rem;
+  }
+  
+  /* About Section */
+  .about-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .about-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+  }
+  
+  .about-section p {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    font-size: 1.1rem;
+  }
+  
+  .gallery-preview h3 {
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin: 3rem 0 1.5rem;
+    font-weight: 600;
+  }
+  
+  .event-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .event-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-images img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Authors Section - Card Grid */
+  .authors-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .authors-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+  }
+  
+  .authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2rem;
+  }
+  
+  .author-card {
+    display: flex;
+    gap: 1.5rem;
+    background: white;
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .author-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .author-photo {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .author-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .author-card:hover .author-photo img {
+    transform: scale(1.1);
+  }
+  
+  .author-details h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .grade {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+  }
+  
+  .bio {
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .contributions h4 {
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .contributions h4::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: var(--gradient);
+    border-radius: 4px;
+  }
+  
+  .contributions ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .contributions li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.75rem;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  
+  .contributions li::before {
+    content: "→";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+  
+  /* Songs Section - Interactive Cards */
+  .songs-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .songs-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+  }
+  
+  .songs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .song-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .song-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient);
+    transition: width 0.3s ease;
+  }
+  
+  .song-card:hover::before {
+    width: 8px;
+  }
+  
+  .song-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .song-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .song-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0;
+  }
+  
+  .page-number {
+    background: var(--light);
+    color: var(--text-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .author {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .theme {
+    display: inline-block;
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    background: rgba(124, 58, 237, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+  }
+  
+  .song-lyrics {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .song-lyrics h4 {
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .song-lyrics h4::before {
+    content: "🎵";
+  }
+  
+  .song-lyrics p {
+    line-height: 1.8;
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    background: rgba(248, 250, 252, 0.5);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+  }
+  
+  .read-more {
+    background: var(--gradient);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .read-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+  }
+  
+  .read-more::after {
+    content: "→";
+  }
+  
+  /* Mentor Section - Profile Highlight */
+  .mentor-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .mentor-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+  }
+  
+  .mentor-profile {
+    display: flex;
+    gap: 3rem;
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .mentor-profile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    background: var(--gradient);
+    border-radius: 0 0 0 100%;
+    opacity: 0.1;
+  }
+  
+  .mentor-photo {
+    width: 220px;
+    height: 220px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .mentor-profile:hover .mentor-photo {
+    transform: rotate(-2deg) scale(1.02);
+  }
+  
+  .mentor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .mentor-details {
+    flex: 1;
+  }
+  
+  .mentor-details h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .role {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .contribution {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    max-width: 600px;
+  }
+  
+  blockquote {
+    font-style: italic;
+    color: var(--text);
+    border-left: 4px solid var(--accent);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    position: relative;
+    background: rgba(248, 250, 252, 0.5);
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+  }
+  
+ 
+  
+  /* CTA Section - Floating Action */
+  .cta-section {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 3rem 2rem;
+    background: var(--gradient);
+    border-radius: 16px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-section::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+  }
+  
+  .cta-section p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .request-btn {
+    background: white;
+    color: var(--primary);
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .request-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.3) 100%);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .request-btn:hover::after {
+    transform: translateX(0);
+  }
+  
+  .request-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .cover-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .cover-image {
+      max-width: 220px;
+      margin-bottom: 2rem;
+    }
+    
+    .mentor-profile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .mentor-photo {
+      width: 180px;
+      height: 180px;
+      margin-bottom: 2rem;
+    }
+    
+    blockquote {
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .publication-tabs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      width: 100%;
+      border-radius: 12px;
+    }
+    
+    .tab-btn {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .authors-grid, .songs-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .cover-details h1 {
+      font-size: 2rem;
+    }
+    
+    .cover-details .description {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .ankur-publication {
+      padding: 1rem 0.5rem;
+    }
+    
+    .cover-section, .mentor-profile {
+      padding: 1.5rem;
+    }
+    
+    .author-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .author-photo {
+      margin: 0 auto;
+    }
+    
+    .contributions li {
+      text-align: left;
+    }
+    
+    .cta-section {
+      padding: 2rem 1rem;
+    }
+    
+    .cta-section p {
+      font-size: 1.1rem;
+    }
+    
+    .request-btn {
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+    }
+  }

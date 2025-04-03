@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e23cdba9.css",
+    "main.js": "/static/js/main.a84fe988.js",
+    "static/media/photo.jpg": "/static/media/photo.281cc53fd07b69b25805.jpg",
+    "static/media/event94.jpg": "/static/media/event94.d9b101f370880b21e0d5.jpg",
+    "static/media/publication1.jpg": "/static/media/publication1.77b4b88185a163ab22c6.jpg",
+    "static/media/event2.jpg": "/static/media/event2.ca9f05cd2d2d3b3285d7.jpg",
+    "static/media/ravisir.jpg": "/static/media/ravisir.6e834e1e91c7158d32b1.jpg",
+    "static/media/event3.jpg": "/static/media/event3.006de044cf39c5e96d9f.jpg",
+    "static/media/event4.jpg": "/static/media/event4.2aa87e7586e7a028a276.jpg",
+    "static/media/event93.jpg": "/static/media/event93.031adeb5ece5d7ffc205.jpg",
+    "static/media/school.jpg": "/static/media/school.354cdf2604a807b332a2.jpg",
+    "static/media/event91.jpg": "/static/media/event91.f0f2a1d432d209ef4edf.jpg",
+    "static/media/school2.jpg": "/static/media/school2.64edc505713a17f1f0fb.jpg",
+    "static/media/event92.jpg": "/static/media/event92.34f73db86693dfcd417d.jpg",
+    "static/media/ankur3.jpg": "/static/media/ankur3.5488798c88a428add4d9.jpg",
+    "static/media/event7.jpg": "/static/media/event7.0caa3a7a74129873d9c7.jpg",
+    "static/media/ankur2.jpg": "/static/media/ankur2.719ee86f5e0750136192.jpg",
+    "static/media/ankur1.jpg": "/static/media/ankur1.bd69275210f16913195c.jpg",
+    "static/media/event6.jpg": "/static/media/event6.b529e7e2b47419fa233c.jpg",
+    "static/media/event8.jpg": "/static/media/event8.7726088c3ba6ecec687e.jpg",
+    "index.html": "/index.html",
+    "main.e23cdba9.css.map": "/static/css/main.e23cdba9.css.map",
+    "main.a84fe988.js.map": "/static/js/main.a84fe988.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e23cdba9.css",
+    "static/js/main.a84fe988.js"
+  ]
+}
