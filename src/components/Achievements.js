@@ -5,59 +5,59 @@ const Achievements = () => {
   return (
     <section className="achievements-section">
       <div className="section-header">
-        <h2>Our Proud Achievements</h2>
-        <p>Celebrating excellence in education since 1985</p>
+        <h2>ನಮ್ಮ ಹೆಮ್ಮೆಯ ಸಾಧನೆಗಳು</h2>
+        <p>೧೯೮೫ ರಿಂದ ಶಿಕ್ಷಣರಂಗದಲ್ಲಿ ಶ್ರೇಷ್ಠತೆಯನ್ನು ಆಚರಿಸುತ್ತಿದೆ</p>
       </div>
 
       <div className="achievements-grid">
         {/* Academic Excellence */}
         <div className="achievement-card academic">
           <div className="icon">🎓</div>
-          <h3>Academic Excellence</h3>
+          <h3>ಶೈಕ್ಷಣಿಕ ಶ್ರೇಷ್ಠತೆ</h3>
           <ul>
-            <li>100% pass rate for 8 consecutive years</li>
-            <li>32 district toppers since 2015</li>
-            <li>85% distinction rate in 2024 board exams</li>
-            <li>Published "Ankur" poetry collection by students</li>
+            <li>೮ ವರ್ಷಗಳಿಂದ ೧೦೦% ಪಾಸ್ ಮಾಡುವ ಸಾಧನೆ</li>
+           
+            <li>೨೦೨೪ ಬೋರ್ಡ್ ಪರೀಕ್ಷೆಯಲ್ಲಿ ೮೫% ವಿಶೇಷ ಶ್ರೇಣಿ</li>
+            <li>ವಿದ್ಯಾರ್ಥಿಗಳ "ಅಂಕುರ" ಕವನ ಸಂಕಲನ ಪ್ರಕಟಣೆ</li>
           </ul>
         </div>
 
         {/* Sports Achievements */}
         <div className="achievement-card sports">
           <div className="icon">🏅</div>
-          <h3>Sports & Arts</h3>
+          <h3>ಕ್ರೀಡೆ & ಕಲೆ</h3>
           <ul>
-            <li>State champions in athletics (2023, 2024)</li>
-            <li>Featured on Doordarshan for cultural program</li>
-            <li>Best school for sports infrastructure award</li>
+           
+            <li>ದೂರದರ್ಶನದಲ್ಲಿ ಪ್ರಸಾರವಾದ ಸಾಂಸ್ಕೃತಿಕ ಕಾರ್ಯಕ್ರಮ</li>
+            
           </ul>
         </div>
 
         {/* Cultural Achievements */}
         <div className="achievement-card cultural">
           <div className="icon">🎭</div>
-          <h3>Cultural Excellence</h3>
+          <h3>ಸಾಂಸ್ಕೃತಿಕ ವೈಭವ</h3>
           <ul>
-            <li>"ಅಂಕುರ - ಕವನ ಸಂಕಲನ" poetry collection published</li>
-            <li>State-level science exhibition champions</li>
-            <li>Annual cultural fest with 1000+ participants</li>
+            <li>"ಅಂಕುರ - ಕನ್ನಡ ಕಾವ್ಯ ಸಂಗ್ರಹ" ಪ್ರಕಟಣೆ</li>
+           
+            <li>ವಾರ್ಷಿಕ ಸಾಂಸ್ಕೃತಿಕ ಉತ್ಸವ </li>
           </ul>
         </div>
 
         {/* Environmental Achievements */}
         <div className="achievement-card alumni">
           <div className="icon">🌱</div>
-          <h3>Environmental Leadership</h3>
+          <h3>ಪರಿಸರ ನಾಯಕತ್ವ</h3>
           <ul>
-            <li>Pioneers in ಪರಿಸರ ಸಂರಕ್ಷಣೆ (Environmental Protection)</li>
-            <li>ವೈಜ್ಞಾನಿಕ ಮನೋಭಾವ-ಅರಿವಿನ ಹರಿವು program</li>
-            <li>National recognition for eco-friendly initiatives</li>
+            <li>ಪರಿಸರ ಸಂರಕ್ಷಣೆಯಲ್ಲಿ ಅಗ್ರಗಣ್ಯರು</li>
+            <li>"ವೈಜ್ಞಾನಿಕ ಮನೋಭಾವ" ಯೋಜನೆ</li>
+            <li>ಪರಿಸರ ಸ್ನೇಹಿ ಉಪಕ್ರಮಗಳಿಗೆ ರಾಷ್ಟ್ರೀಯ ಮನ್ನಣೆ</li>
           </ul>
         </div>
       </div>
 
       <div className="view-more">
-        <button className="btn-view-more">Explore All Achievements →</button>
+        <button className="btn-view-more">ಎಲ್ಲಾ ಸಾಧನೆಗಳನ್ನು ನೋಡಿ →</button>
       </div>
     </section>
   );

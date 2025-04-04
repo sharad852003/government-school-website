@@ -42,7 +42,8 @@ function Home() {
       {/* Main Banner Section */}
       <section className="home-banner">
         <div className="home-content">
-          <h1>Welcome to Government School Nandgur</h1>
+          <h1>
+           ನಮ್ಮೂರು ಸರ್ಕಾರಿ ಹಿರಿಯ ಪ್ರಾಥಮಿಕ ಶಾಲೆ ನಂದಗೂರು</h1>
           <p>
             Empowering minds, shaping futures, and building tomorrow's leaders
             through quality education and holistic development.
@@ -62,11 +63,12 @@ function Home() {
      
       <About/>
       <Teachers />
-      <SuccessStories />
+     
       <Gallery />
       <AnkurPublication/>
       <Achievements />
       <Clubs /> 
+      <SuccessStories />
    
       </div>
   );

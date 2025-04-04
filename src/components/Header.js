@@ -80,13 +80,7 @@ const Header = () => {
             >
               Alumni
             </NavLink>
-            <NavLink 
-              to="/enroll" 
-              className="nav-link enroll-btn"
-              onClick={closeMobileMenu}
-            >
-              Enroll Now
-            </NavLink>
+            
           </div>
         </nav>
       </header>

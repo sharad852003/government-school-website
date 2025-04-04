@@ -1,39 +1,42 @@
 import React from 'react';
 import './SuccessStories.css';
+import alumni1 from '../assets/photo.jpg'; // Update with your actual paths
+import alumni2 from '../assets/photo.jpg';
+import alumni3 from '../assets/photo.jpg';
 
 const SuccessStories = () => {
   const alumni = [
     {
       id: 1,
-      name: "Dr. Priya Sharma",
+      name: "ಪ್ರಿಯಾ ಶರ್ಮಾ",
       batch: "2005",
-      achievement: "Cardiologist at AIIMS Delhi",
-      quote: "The foundation from my school paved my medical career",
-      image: "/images/alumni1.jpg" // Update path
+      achievement: "ವೈದ್ಯರು",
+      quote: "ನಮ್ಮ ಶಾಲೆಯ ಅಡಿಪಾಯವು ನನ್ನ ವೈದ್ಯಕೀಯ ವೃತ್ತಿಜೀವನಕ್ಕೆ ಮಾರ್ಗದರ್ಶನ ನೀಡಿತು",
+      image: alumni1
     },
     {
       id: 2,
-      name: "Rahul Deshmukh",
+      name: "ರಾಹುಲ್ ದೇಶಮುಖ್",
       batch: "2012",
-      achievement: "IAS Officer, Maharashtra Cadre",
-      quote: "My teachers' guidance shaped my civil service journey",
-      image: "/images/alumni2.jpg" // Update path
+      achievement: "IAS ಅಧಿಕಾರಿ",
+      quote: "ನನ್ನ ಶಿಕ್ಷಕರ ಮಾರ್ಗದರ್ಶನ ನನ್ನ ಸಿವಿಲ್ ಸರ್ವಿಸ್ ಪ್ರಯಾಣವನ್ನು ರೂಪಿಸಿತು",
+      image: alumni2
     },
     {
       id: 3,
-      name: "Neha Patil",
+      name: "ನೇಹಾ ಪಾಟೀಲ್",
       batch: "2018",
-      achievement: "Google Software Engineer",
-      quote: "School's computer lab sparked my tech passion",
-      image: "/images/alumni3.jpg" // Update path
+      achievement: "ಸಾಫ್ಟ್ವೇರ್ ಇಂಜಿನಿಯರ್",
+      quote: "ಶಾಲೆಯ ಕಂಪ್ಯೂಟರ್ ಲ್ಯಾಬ್ ನನ್ನ ತಂತ್ರಜ್ಞಾನದ ಬಗ್ಗೆ ಆಸಕ್ತಿಯನ್ನು ಮೂಡಿಸಿತು",
+      image: alumni3
     }
   ];
 
   return (
     <section className="success-stories">
       <div className="section-header">
-        <h2>Where Our Students Shine</h2>
-        <p>Proud alumni making waves across industries</p>
+        <h2>ನಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು ಹೊಳೆಯುವೆಡೆ</h2>
+        <p>ವಿವಿಧ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ತಮ್ಮ ಮುದ್ರೆಯನ್ನು ಮೂಡಿಸಿರುವ ಹೆಮ್ಮೆಯ ವಿದ್ಯಾರ್ಥಿಗಳು</p>
       </div>
 
       <div className="alumni-grid">
@@ -41,19 +44,19 @@ const SuccessStories = () => {
           <div key={alum.id} className="alumni-card">
             <div className="alumni-image">
               <img src={alum.image} alt={alum.name} />
-              <div className="batch-badge">Batch {alum.batch}</div>
+              <div className="batch-badge">{alum.batch} ಬ್ಯಾಚ್</div>
             </div>
             <div className="alumni-details">
               <h3>{alum.name}</h3>
               <p className="achievement">{alum.achievement}</p>
-              <blockquote>"{alum.quote}"</blockquote>
+              <blockquote>" {alum.quote} "</blockquote>
             </div>
           </div>
         ))}
       </div>
 
       <div className="view-more">
-        <button className="btn-view-more">More Success Stories →</button>
+        <button className="btn-view-more">ಹೆಚ್ಚಿನ ಯಶಸ್ಸಿನ ಕಥೆಗಳು →</button>
       </div>
     </section>
   );
