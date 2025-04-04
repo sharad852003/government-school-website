@@ -823,3 +823,175 @@
   margin-bottom: 0.3rem;
   line-height: 1.6;
 }
+/* Base Styles */
+.about-page {
+  font-family: 'Noto Sans Kannada', 'Arial Unicode MS', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Village Story Section */
+.village-story {
+  background: #f9f9f9;
+  padding: 4rem 0;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-content h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.kannada-highlight {
+  display: block;
+  font-size: 1.8rem;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.english-text {
+  display: block;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.text-column {
+  padding: 1rem;
+}
+
+.kannada-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.kannada-text strong {
+  color: #2c3e50;
+}
+
+h3.kannada-highlight {
+  color: #27ae60;
+  font-size: 1.4rem;
+  margin: 1.5rem 0 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.closing-text {
+  font-style: italic;
+  background: #f0f7f4;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* School Excellence Section */
+.school-excellence {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.excellence-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.excellence-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.excellence-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.excellence-card h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.excellence-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  background: #3498db;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.testimonial-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 4rem;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.testimonial-text {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .excellence-cards {
+    grid-template-columns: 1fr;
+  }
+}
