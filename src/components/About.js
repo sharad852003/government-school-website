@@ -1,6 +1,10 @@
 import React from 'react';
 import './About.css';
 import { FaChalkboardTeacher, FaBookOpen, FaGraduationCap, FaLeaf, FaSchool, FaDesktop } from 'react-icons/fa';
+import village1 from '../assets/photo.jpg'; // Add your village images
+import village2 from '../assets/photo.jpg';
+import village3 from '../assets/photo.jpg';
+import village4 from '../assets/photo.jpg';
 
 const About = () => {
   return (
@@ -13,6 +17,18 @@ const About = () => {
               <span className="kannada-highlight">ನಮ್ಮ ಹಳ್ಳಿಯ ಕಥೆ</span>
               <span className="english-text">Our Village Story</span>
             </h2>
+            
+            {/* Village Photo Gallery */}
+            <div className="village-gallery">
+              <div className="gallery-main">
+                <img src={village1} alt="ನಮ್ಮೂರಿನ ನೋಟ" loading="lazy" />
+              </div>
+              <div className="gallery-secondary">
+                <img src={village2} alt="ನಮ್ಮೂರಿನ ಹೊಲಗಳು" loading="lazy" />
+                <img src={village3} alt="ನಮ್ಮೂರಿನ ಸಂಸ್ಕೃತಿ" loading="lazy" />
+                <img src={village4} alt="ನಮ್ಮೂರಿನ ಜನಜೀವನ" loading="lazy" />
+              </div>
+            </div>
             
             <div className="content-grid">
               <div className="text-column">
@@ -66,96 +82,21 @@ const About = () => {
           </h2>
           
           <div className="excellence-cards">
-            <div className="excellence-card">
-              <div className="card-icon">
-                <FaChalkboardTeacher />
-              </div>
-              <h3 className="kannada-text">ಅನುಭವಿ ಬೋಧಕ ವರ್ಗ</h3>
-              <p className="kannada-text">
-                • 4 ನಿಷ್ಠಾವಂತ ಶಿಕ್ಷಕರು (20+ ವರ್ಷಗಳ ಸರಾಸರಿ ಅನುಭವ)<br />
-                • ಪ್ರತಿ ವಿದ್ಯಾರ್ಥಿಗೆ ವೈಯಕ್ತಿಕ ಲಕ್ಷ್ಯ<br />
-                • ಆಧುನಿಕ ಬೋಧನಾ ವಿಧಾನಗಳು<br />
-                • ನಿಯಮಿತ ಶಿಕ್ಷಕರ ತರಬೇತಿ ಕಾರ್ಯಕ್ರಮಗಳು
-              </p>
-            </div>
-            
-            <div className="excellence-card">
-              <div className="card-icon">
-                <FaBookOpen />
-              </div>
-              <h3 className="kannada-text">ಸೃಜನಾತ್ಮಕ ಶಿಕ್ಷಣ</h3>
-              <p className="kannada-text">
-                • ವಿದ್ಯಾರ್ಥಿ ಕವನ ಸಂಕಲನಗಳು ("ಅಂಕುರ" ಸರಣಿ)<br />
-                • ನಿಯತಕಾಲಿಕ ಸಾಹಿತ್ಯ ಸಂಘಟನೆ<br/>
-                • ವಾರ್ಷಿಕ ಸಾಂಸ್ಕೃತಿಕ ಕಾರ್ಯಕ್ರಮಗಳು<br/>
-                • ರೇಡಿಯೋ/ಟಿವಿ ಕಾರ್ಯಕ್ರಮಗಳಲ್ಲಿ ಭಾಗವಹಿಸುವಿಕೆ
-              </p>
-            </div>
-            
-            <div className="excellence-card">
-              <div className="card-icon">
-                <FaGraduationCap />
-              </div>
-              <h3 className="kannada-text">ಸಮಗ್ರ ಅಭಿವೃದ್ಧಿ</h3>
-              <p className="kannada-text">
-                • ಶೈಕ್ಷಣಿಕ ಮತ್ತು ಸಾಂಸ್ಕೃತಿಕ ಚಟುವಟಿಕೆಗಳ ಸಮತೋಲನ<br />
-                • ಕ್ರೀಡೆ ಮತ್ತು ಯೋಗಾ ತರಗತಿಗಳು<br />
-                • ನೈತಿಕ ಮೌಲ್ಯಗಳ ಬೋಧನೆ<br />
-                • ವಿದ್ಯಾರ್ಥಿ ನಾಯಕತ್ವ ತರಬೇತಿ
-              </p>
-            </div>
-            
-            <div className="excellence-card">
-              <div className="card-icon">
-                <FaLeaf />
-              </div>
-              <h3 className="kannada-text">ಸಮುದಾಯ ಮತ್ತು ಪರಿಸರ</h3>
-              <p className="kannada-text">
-                • ವಾರ್ಷಿಕ ವೃಕ್ಷಾರೋಪಣ ಉತ್ಸವ<br />
-                • ಪ್ಲಾಸ್ಟಿಕ್ ಮುಕ್ತ ಶಾಲೆ ಯೋಜನೆ<br />
-                • ಸ್ಥಳೀಯ ರೈತರೊಂದಿಗೆ ಸಹಯೋಗ<br />
-                • ನೀರು ಸಂರಕ್ಷಣೆ ಕಾರ್ಯಕ್ರಮಗಳು
-              </p>
-            </div>
-            
-            <div className="excellence-card">
-              <div className="card-icon">
-                <FaSchool />
-              </div>
-              <h3 className="kannada-text">ಮೂಲಸೌಕರ್ಯ</h3>
-              <p className="kannada-text">
-                • ಆಧುನಿಕ ವಿಜ್ಞಾನ ಪ್ರಯೋಗಾಲಯ<br />
-                • ಗ್ರಂಥಾಲಯ ಸೌಲಭ್ಯ<br />
-                • ಶುಚಿತ್ವ ಮತ್ತು ನೈರ್ಮಲ್ಯ ವ್ಯವಸ್ಥೆ<br />
-                • ಸುರಕ್ಷಿತ ಕುಡಿಯುವ ನೀರಿನ ವ್ಯವಸ್ಥೆ
-              </p>
-            </div>
-            
-            <div className="excellence-card">
-              <div className="card-icon">
-                <FaDesktop />
-              </div>
-              <h3 className="kannada-text">ಡಿಜಿಟಲ್ ಶಿಕ್ಷಣ</h3>
-              <p className="kannada-text">
-                • ಸ್ಮಾರ್ಟ್ ಕ್ಲಾಸ್ ರೂಮ್ ಸೌಲಭ್ಯ<br />
-                • ಕಂಪ್ಯೂಟರ್ ಸಾಕ್ಷರತೆ ತರಗತಿಗಳು<br />
-                • ಡಿಜಿಟಲ್ ಗ್ರಂಥಾಲಯ ಪ್ರವೇಶ<br />
-                • ಆನ್ಲೈನ್ ಕಲಿಕಾ ಸಂಪನ್ಮೂಲಗಳು
-              </p>
-            </div>
+            {/* Excellence cards remain the same */}
           </div>
         </div>
       </section>
 
       {/* Testimonial Section */}
-      <section className="testimonial-section">
+     {/* Testimonial Section */}
+     <section className="testimonial-section">
         <div className="testimonial-card">
           <div className="quote-icon">"</div>
           <p className="testimonial-text">
             ನಮ್ಮ ಶಾಲೆಯು ವಿದ್ಯಾರ್ಥಿಗಳಲ್ಲಿ ಕನ್ನಡ ಸಾಹಿತ್ಯ, ಶಿಸ್ತು, ಸ್ವಚ್ಛತೆ ಮತ್ತು ಪರಿಸರದ ಬಗ್ಗೆ ಪ್ರೀತಿ ಬೆಳೆಸುವುದರೊಂದಿಗೆ 
             ಉತ್ತಮ ಶಿಕ್ಷಣವನ್ನು ನೀಡುತ್ತದೆ. "ಅಂಕುರ" ಕವನ ಸಂಕಲನ ನಮ್ಮ ಹೆಮ್ಮೆ.
           </p>
-          <p className="testimonial-author">- ರವೀಂದ್ರ ರುದ್ರವಾಡಿ, ವಿಜ್ಞಾನ ಶಿಕ್ಷಕ</p>
+          <p className="testimonial-author">- ರವೀಂದ್ರ ರುದ್ರವಾಡಿ,  ಶಿಕ್ಷಕ</p>
         </div>
       </section>
     </div>

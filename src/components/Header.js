@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, School } from 'lucide-react';
+import { Menu, X, GraduationCap } from 'lucide-react';
 import './Header.css';
 
 const Header = () => {
@@ -17,89 +17,74 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const closeMobileMenu = () => setIsMenuOpen(false);
+  // Close mobile menu when a link is clicked
+  const closeMobileMenu = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <>
       <header className={`header ${scrolled ? 'scrolled' : ''}`}>
         <nav className="navbar container">
           <div className="navbar-brand">
-            <School className="logo-icon" size={32} />
-            <NavLink to="/" className="brand-name">
-              <span className="brand-name-main">Government School</span>
-              <span className="brand-name-sub"> Nandgur, Karnataka</span>
-            </NavLink>
+            <GraduationCap className="logo-icon" size={32} />
+            <NavLink to="/" className="brand-name">ನಮ್ಮೂರು ಸರ್ಕಾರಿ ಹಿರಿಯ ಪ್ರಾಥಮಿಕ ಶಾಲೆ ನಂದಗೂರು</NavLink>
           </div>
           
-          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <div className="nav-links-container">
-              <NavLink 
-                to="/" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-                onClick={closeMobileMenu}
-                end
-              >
-                <span className="link-text">Home</span>
-                <span className="link-underline"></span>
-              </NavLink>
-              
-              <NavLink 
-                to="/about" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-                onClick={closeMobileMenu}
-              >
-                <span className="link-text">About Us</span>
-                <span className="link-underline"></span>
-              </NavLink>
-              
-              <NavLink 
-                to="/achievements" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-                onClick={closeMobileMenu}
-              >
-                <span className="link-text">Achievements</span>
-                <span className="link-underline"></span>
-              </NavLink>
-              
-              <NavLink 
-                to="/teachers" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-                onClick={closeMobileMenu}
-              >
-                <span className="link-text">Teachers</span>
-                <span className="link-underline"></span>
-              </NavLink>
-              
-              <NavLink 
-                to="/clubs" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-                onClick={closeMobileMenu}
-              >
-                <span className="link-text">Clubs</span>
-                <span className="link-underline"></span>
-              </NavLink>
-              
-              <NavLink 
-                to="/success-stories" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-                onClick={closeMobileMenu}
-              >
-                <span className="link-text">Alumni</span>
-                <span className="link-underline"></span>
-              </NavLink>
-            </div>
-          </div>
-
           <button 
-            className={`menu-toggle ${isMenuOpen ? 'open' : ''}`}
+            className="menu-toggle" 
             onClick={toggleMenu} 
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X className="icon" size={28} /> : <Menu className="icon" size={28} />}
           </button>
+          
+          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+              end
+            >
+              Home
+            </NavLink>
+           
+            <NavLink 
+              to="/achievements" 
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              Achievements
+            </NavLink>
+            <NavLink 
+              to="/teachers" 
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              Teachers
+            </NavLink>
+            <NavLink 
+              to="/clubs" 
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              Clubs
+            </NavLink>
+            <NavLink 
+              to="/success-stories" 
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              Alumni
+            </NavLink>
+            
+          </div>
         </nav>
       </header>
+      {/* Spacer to prevent content from being hidden behind fixed header */}
       <div className="header-spacer"></div>
     </>
   );

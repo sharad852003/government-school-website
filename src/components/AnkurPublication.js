@@ -237,11 +237,7 @@ const AnkurPublication = () => {
         )}
       </div>
 
-      {/* Call to Action */}
-      <div className="cta-section">
-        <p className="kannada-text">ಅಂಕುರ ಪುಸ್ತಕದ ಪ್ರತಿಯೊಂದನ್ನು ಪಡೆಯಲು ಆಸಕ್ತರಾಗಿದ್ದೀರಾ?</p>
-        <button className="request-btn kannada-text">ಪುಸ್ತಕವನ್ನು ವಿನಂತಿಸಿ</button>
-      </div>
+     
     </section>
   );
 };

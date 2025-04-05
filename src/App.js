@@ -7,7 +7,8 @@ import Achievements from "./components/Achievements";
 import SuccessStories from "./components/SuccessStories";
 import Teachers from "./components/Teachers";
 import Clubs from "./components/Clubs";
-import AnkurPublication from "./components/AnkurPublication"; // New import
+import AnkurPublication from "./components/AnkurPublication";
+import CommentSection from "./components/CommentSection"; // Import the new CommentSection component
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -25,7 +26,8 @@ function App() {
         <Route path="/success-stories" element={<SuccessStories />} />
         <Route path="/teachers" element={<Teachers />} />
         <Route path="/clubs" element={<Clubs />} />
-        <Route path="/ankur" element={<AnkurPublication />} /> {/* New route */}
+        <Route path="/ankur" element={<AnkurPublication />} />
+        <Route path="/feedback" element={<CommentSection />} /> {/* New comment section route */}
       </Routes>
       <Footer />
     </Router>

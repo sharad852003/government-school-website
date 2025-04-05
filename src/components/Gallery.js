@@ -191,6 +191,7 @@ const Gallery = () => {
                 {modalContent.date && (
                   <div className="meta-item">
                     <span className="material-icons">event</span>
+                    
                     <span>{modalContent.date}</span>
                   </div>
                 )}
@@ -198,6 +199,7 @@ const Gallery = () => {
                   <div className="meta-item">
                     <span className="material-icons">article</span>
                     <span>{modalContent.source}</span>
+                    
                   </div>
                 )}
                 {modalContent.year && (

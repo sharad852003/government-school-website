@@ -8,23 +8,23 @@ const SuccessStories = () => {
   const alumni = [
     {
       id: 1,
-      name: "ಪ್ರಿಯಾ ಶರ್ಮಾ",
+      name: "Avi",
       batch: "2005",
-      achievement: "ವೈದ್ಯರು",
+      achievement: "teacher",
       quote: "ನಮ್ಮ ಶಾಲೆಯ ಅಡಿಪಾಯವು ನನ್ನ ವೈದ್ಯಕೀಯ ವೃತ್ತಿಜೀವನಕ್ಕೆ ಮಾರ್ಗದರ್ಶನ ನೀಡಿತು",
       image: alumni1
     },
     {
       id: 2,
-      name: "ರಾಹುಲ್ ದೇಶಮುಖ್",
+      name: "",
       batch: "2012",
-      achievement: "IAS ಅಧಿಕಾರಿ",
+      achievement: "",
       quote: "ನನ್ನ ಶಿಕ್ಷಕರ ಮಾರ್ಗದರ್ಶನ ನನ್ನ ಸಿವಿಲ್ ಸರ್ವಿಸ್ ಪ್ರಯಾಣವನ್ನು ರೂಪಿಸಿತು",
       image: alumni2
     },
     {
       id: 3,
-      name: "ನೇಹಾ ಪಾಟೀಲ್",
+      name: "suresh",
       batch: "2018",
       achievement: "ಸಾಫ್ಟ್ವೇರ್ ಇಂಜಿನಿಯರ್",
       quote: "ಶಾಲೆಯ ಕಂಪ್ಯೂಟರ್ ಲ್ಯಾಬ್ ನನ್ನ ತಂತ್ರಜ್ಞಾನದ ಬಗ್ಗೆ ಆಸಕ್ತಿಯನ್ನು ಮೂಡಿಸಿತು",
