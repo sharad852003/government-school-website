@@ -417,3 +417,110 @@
     bottom: 60px;
   }
 }
+/* Banner Section */
+.home-banner {
+  height: 85vh;
+  min-height: 500px;
+  max-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Banner Content */
+.home-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  color: var(--light-color);
+  transform: translateY(15px);
+  transition: var(--transition);
+}
+
+.kannada-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.english-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+}
+
+.tagline {
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+  margin-bottom: 2.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .home-banner {
+    min-height: 450px;
+    height: 80vh;
+    padding: 3rem 1rem;
+  }
+
+  .kannada-title {
+    font-size: 1.6rem;
+  }
+
+  .english-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-banner {
+    min-height: 400px;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .home-content {
+    transform: none;
+    padding: 1rem;
+  }
+
+  .kannada-title {
+    font-size: 1.3rem;
+  }
+
+  .english-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-banner {
+    min-height: 360px;
+  }
+
+  .kannada-title {
+    font-size: 1.2rem;
+  }
+
+  .english-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .tagline {
+    font-size: 0.8rem;
+  }
+}
