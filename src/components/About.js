@@ -7,6 +7,7 @@ import village3 from '../assets/photo.jpg';
 import village4 from '../assets/photo.jpg';
 import schoolImage from '../assets/school.jpg'; // New school image
 
+
 const About = () => {
   return (
     <div className="about-page">
@@ -17,10 +18,11 @@ const About = () => {
           <div className="intro-image">
             <img src={schoolImage} alt="Our School" loading="lazy" />
           </div>
+          
           <div className="intro-text">
             <h2>
               <span className="kannada-highlight">ನಮ್ಮ ಶಾಲೆಯ ಪರಿಚಯ</span>
-              <span className="english-text">About Our School</span>
+            
             </h2>
             <p>
               ನಮ್ಮ ಶಾಲೆ ಒಂದು ಆಧುನಿಕ ಶಿಕ್ಷಣದ ಪ್ರತೀಕವಾಗಿದೆ. ಇಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳು ಕೇವಲ ಪುಸ್ತಕದ ಪಾಠವಷ್ಟೇ ಅಲ್ಲದೆ ನೈತಿಕ ಮೌಲ್ಯಗಳು, ಸ್ವಚ್ಛತೆ, ಕಾವ್ಯ ಪ್ರೀತಿ, ಸಾಂಸ್ಕೃತಿಕ ಚಟುವಟಿಕೆಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಂಡು ಪರಿಪೂರ್ಣ ವ್ಯಕ್ತಿತ್ವವನ್ನು ರೂಪಿಸುತ್ತಿದ್ದಾರೆ.
@@ -38,7 +40,7 @@ const About = () => {
           <div className="text-content">
             <h2>
               <span className="kannada-highlight">ನಮ್ಮ ಹಳ್ಳಿಯ ಕಥೆ</span>
-              <span className="english-text">Our Village Story</span>
+             
             </h2>
             
             {/* Village Photo Gallery */}

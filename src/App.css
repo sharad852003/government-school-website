@@ -1,42 +1,211 @@
-#root {
-  max-width: 1280px;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+/* Hero Section */
+.hero-parallax {
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  padding: 5rem 2rem;
   text-align: center;
+  color: white;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero-parallax h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.hero-parallax p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Village Story Section */
+.village-story {
+  background: linear-gradient(135deg, #fdfdfd, #f2f9f5);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+}
+
+.village-story:hover {
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+.village-gallery {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.gallery-main img {
+  width: 100%;
+  border-radius: 16px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-secondary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-secondary img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.gallery-secondary img:hover {
+  transform: scale(1.05);
+}
+
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.text-column {
+  flex: 1 1 48%;
+  background: #ffffff;
+  border-left: 5px solid #27ae60;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.text-column:hover {
+  transform: translateY(-5px);
+}
+
+.kannada-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2d3436;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-family: 'Noto Sans Kannada', sans-serif;
+}
+
+.closing-text {
+  font-weight: 700;
+  color: #16a085;
+  font-size: 1.15rem;
+  margin-top: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes fadeInUp {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-parallax h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-parallax p {
+    font-size: 1rem;
+  }
+
+  .text-column {
+    flex: 1 1 100%;
   }
 }
 
-.card {
-  padding: 2em;
+@media (max-width: 768px) {
+  .village-story {
+    padding: 2rem 1rem;
+  }
+
+  .gallery-secondary {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .gallery-secondary img {
+    height: 100px;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+@media (max-width: 576px) {
+  .hero-parallax h1 {
+    font-size: 2rem;
+  }
+
+  .hero-parallax p {
+    font-size: 0.95rem;
+  }
+
+  .gallery-main img,
+  .gallery-secondary img {
+    border-radius: 10px;
+  }
+
+  .text-column {
+    padding: 1rem;
+  }
+
+  .kannada-text {
+    font-size: 1rem;
+  }
+
+  .closing-text {
+    font-size: 1rem;
+  }
 }
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;700&family=Poppins:wght@500;700&display=swap');
