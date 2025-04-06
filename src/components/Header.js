@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X, Home, Trophy, Users, BookOpen, Star } from 'lucide-react';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,21 +15,21 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const closeMobileMenu = () => {
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-    }
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMobileMenu = () => setIsMenuOpen(false);
 
   return (
     <>
       <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-        <nav className="navbar container">
+        <div className="header-container">
           <div className="navbar-brand">
-            <GraduationCap className="logo-icon" size={32} />
-            <NavLink to="/" className="brand-name">
-              ನಮ್ಮೂರು ಸರ್ಕಾರಿ ಹಿರಿಯ ಪ್ರಾಥಮಿಕ ಶಾಲೆ ನಂದಗೂರು
-            </NavLink>
+            <div className="school-logo">
+              <div className="logo-icon">GHS</div>
+              <div className="logo-text">
+                <span>Government Higher Primary School</span>
+                <span className="kannada-text">ಸರ್ಕಾರಿ ಹಿರಿಯ ಪ್ರಾಥಮಿಕ ಶಾಲೆ</span>
+              </div>
+            </div>
           </div>
 
           <button
@@ -40,48 +38,32 @@ const Header = () => {
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
-            {isMenuOpen ? <X className="icon" size={28} /> : <Menu className="icon" size={28} />}
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
 
-          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-            <NavLink
-              to="/"
-              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-              onClick={closeMobileMenu}
-              end
-            >
-              Home
+          <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+            <NavLink to="/" className="nav-link" onClick={closeMobileMenu} end>
+              <Home size={18} className="nav-icon" />
+              <span>Home</span>
             </NavLink>
-            <NavLink
-              to="/achievements"
-              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-              onClick={closeMobileMenu}
-            >
-              Achievements
+            <NavLink to="/achievements" className="nav-link" onClick={closeMobileMenu}>
+              <Trophy size={18} className="nav-icon" />
+              <span>Achievements</span>
             </NavLink>
-            <NavLink
-              to="/teachers"
-              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-              onClick={closeMobileMenu}
-            >
-              Teachers
+            <NavLink to="/teachers" className="nav-link" onClick={closeMobileMenu}>
+              <Users size={18} className="nav-icon" />
+              <span>Teachers</span>
             </NavLink>
-            <NavLink
-              to="/clubs"
-              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-              onClick={closeMobileMenu}
-            >
-              Clubs
+            <NavLink to="/clubs" className="nav-link" onClick={closeMobileMenu}>
+              <BookOpen size={18} className="nav-icon" />
+              <span>Clubs</span>
             </NavLink>
-            <NavLink
-              to="/success-stories"
-              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-              onClick={closeMobileMenu}
-            >
-              Alumni
+            <NavLink to="/success-stories" className="nav-link" onClick={closeMobileMenu}>
+              <Star size={18} className="nav-icon" />
+              <span>Alumni</span>
             </NavLink>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </header>
       <div className="header-spacer"></div>
     </>

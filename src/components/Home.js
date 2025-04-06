@@ -9,36 +9,37 @@ import Achievements from "./Achievements";
 import SuccessStories from "./SuccessStories";
 import Teachers from './Teachers';
 import Gallery from './Gallery';
-import Clubs from "./Clubs";
+
 import About from "./About";
 import AnkurPublication from "./AnkurPublication";
 import CommentSection from './CommentSection';
+import ImageComparison from './ImageComparison'; 
 
 function Home() {
   const banners = [
     {
       image: bg1,
       kannadaTitle: "ನಮ್ಮೂರು ಸರ್ಕಾರಿ ಹಿರಿಯ ಪ್ರಾಥಮಿಕ ಶಾಲೆ ನಂದಗೂರು",
-      englishTitle: "Government Higher Primary School Nandgur",
+      englishTitle: "",
       tagline: "Empowering rural minds through quality education since 1985"
     },
     {
       image: bg2,
       kannadaTitle: "ಗುಣಮಟ್ಟದ ಶಿಕ್ಷಣಕ್ಕಾಗಿ ಸಮರ್ಪಿತ",
-      englishTitle: "Dedicated to Quality Education",
-      tagline: "Our mission is to nurture young minds for a better tomorrow"
+      englishTitle: "",
+      tagline: "ಶಿಕ್ಷಣವೇ ಈ ಜಗತ್ತನ್ನು ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಾಗುವ ಶಕ್ತಿಯುತ ಆಯುಧವಾಗಿದೆ."
     },
     {
       image: bg3,
       kannadaTitle: "ವೈವಿಧ್ಯತೆ ಮತ್ತು ಸಮಗ್ರ ಅಭಿವೃದ್ಧಿ",
-      englishTitle: "Diversity and Holistic Development",
-      tagline: "Fostering academic excellence with cultural values"
+      englishTitle: "",
+      tagline: "ಕಲಿಕೆಯಿಂದ ಸೃಜನಶೀಲತೆ, ಸೃಜನಶೀಲತೆಯಿಂದ ಚಿಂತನೆ, ಚಿಂತನೆ ಯಿಂದ ಜ್ಞಾನ, ಜ್ಞಾನದಿಂದ ಮಹತ್ವತೆ ಬರುತ್ತದೆ."
     },
     {
       image: bg4,
       kannadaTitle: "ಸಮುದಾಯದೊಂದಿಗೆ ಸಂಪರ್ಕ",
-      englishTitle: "Connected with Community",
-      tagline: "Building bridges between education and society"
+      englishTitle: "",
+      tagline: "ಕಲಿಯುವ ನಿಷ್ಠೆ ಬೆಳೆಯಿಸಿ, ಏಕೆಂದರೆ ಅದು ಜೀವಿತವಿಡೀ ನಿಮ್ಮ ಬೆಳವಣಿಗೆಗೆ ಕಾರಣವಾಗುತ್ತದೆ."
     }
   ];
 
@@ -130,7 +131,7 @@ function Home() {
         <Gallery />
         <AnkurPublication/>
         <Achievements />
-        <Clubs /> 
+        <ImageComparison />
         <SuccessStories />
         <CommentSection />
       </div>

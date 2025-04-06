@@ -8,7 +8,8 @@ import SuccessStories from "./components/SuccessStories";
 import Teachers from "./components/Teachers";
 import Clubs from "./components/Clubs";
 import AnkurPublication from "./components/AnkurPublication";
-import CommentSection from "./components/CommentSection"; // Import the new CommentSection component
+import CommentSection from "./components/CommentSection";
+import ImageComparison from "./components/ImageComparison"; // Import the new ImageComparison component
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -27,7 +28,8 @@ function App() {
         <Route path="/teachers" element={<Teachers />} />
         <Route path="/clubs" element={<Clubs />} />
         <Route path="/ankur" element={<AnkurPublication />} />
-        <Route path="/feedback" element={<CommentSection />} /> {/* New comment section route */}
+        <Route path="/feedback" element={<CommentSection />} />
+        <Route path="/ImageComparison" element={<ImageComparison />} /> {/* New image gallery route */}
       </Routes>
       <Footer />
     </Router>

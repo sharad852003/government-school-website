@@ -1,114 +1,120 @@
 .success-stories {
-    padding: 80px 20px;
-    background-color: white;
-    text-align: center;
-  }
-  
-  .section-header h2 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  
-  .section-header p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    margin-bottom: 50px;
-  }
-  
-  .alumni-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .alumni-card {
-    background: #f9f9f9;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-  }
-  
-  .alumni-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .alumni-image {
-    position: relative;
-    height: 250px;
-  }
-  
-  .alumni-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .batch-badge {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background: #e74c3c;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-  }
-  
-  .alumni-details {
-    padding: 25px;
-    text-align: left;
-  }
-  
-  .alumni-details h3 {
-    font-size: 1.5rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  
-  .alumni-details .achievement {
-    color: #3498db;
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
-  
-  .alumni-details blockquote {
-    font-style: italic;
-    color: #7f8c8d;
-    border-left: 3px solid #3498db;
-    padding-left: 15px;
-    margin: 20px 0;
-  }
-  
-  /* View More Button */
-  .btn-view-more {
-    margin-top: 50px;
-    padding: 12px 30px;
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-view-more:hover {
-    background-color: #1a252f;
-    transform: translateY(-2px);
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .alumni-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .alumni-image {
-      height: 200px;
-    }
-  }
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #f4f6f9, #eef2f7);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-header h2 {
+  font-size: 2.4em;
+  margin-bottom: 10px;
+  color: #1e1e2f;
+}
+
+.section-header p {
+  font-size: 1.1em;
+  color: #5f6b7a;
+  margin-bottom: 40px;
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.alumni-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.alumni-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+}
+
+.alumni-image {
+  position: relative;
+}
+
+.alumni-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.batch-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(30, 136, 229, 0.9);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.alumni-details {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.alumni-details h3 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+  color: #1e1e2f;
+}
+
+.achievement {
+  color: #3498db;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #444;
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.view-more {
+  margin-top: 40px;
+}
+
+.btn-view-more {
+  background: #1e88e5;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
+}
+
+.btn-view-more:hover {
+  background: #1565c0;
+  transform: scale(1.05);
+}
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
