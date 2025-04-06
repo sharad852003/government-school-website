@@ -82,33 +82,13 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Newsletter */}
-          <div className="footer-section">
-            <h3 className="footer-heading">Newsletter</h3>
-            <p className="newsletter-text">
-              Subscribe to our newsletter for the latest school news and events.
-            </p>
-            <form className="newsletter-form">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                required
-              />
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
         </div>
+      </div>
 
-        {/* Copyright */}
-        <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} School Name. All rights reserved.</p>
-          <div className="legal-links">
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/terms">Terms of Service</Link>
-            <Link to="/sitemap">Sitemap</Link>
-          </div>
-        </div>
+      {/* Footer Bottom */}
+      <div className="footer-bottom">
+        <p>© {new Date().getFullYear()} Our School. All rights reserved.</p>
+        <p>Designed & Developed by Sharad patil | DSATM, Bangalore</p>
       </div>
     </footer>
   );

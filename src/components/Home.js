@@ -14,6 +14,8 @@ import About from "./About";
 import AnkurPublication from "./AnkurPublication";
 import CommentSection from './CommentSection';
 import ImageComparison from './ImageComparison'; 
+import VideoSection from "./VideoSection";
+
 
 function Home() {
   const banners = [
@@ -132,7 +134,9 @@ function Home() {
         <AnkurPublication/>
         <Achievements />
         <ImageComparison />
+        <VideoSection />
         <SuccessStories />
+        
         <CommentSection />
       </div>
     </div>
