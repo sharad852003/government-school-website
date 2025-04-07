@@ -9,13 +9,11 @@ import Achievements from "./Achievements";
 import SuccessStories from "./SuccessStories";
 import Teachers from './Teachers';
 import Gallery from './Gallery';
-
 import About from "./About";
 import AnkurPublication from "./AnkurPublication";
 import CommentSection from './CommentSection';
 import ImageComparison from './ImageComparison'; 
 import VideoSection from "./VideoSection";
-
 
 function Home() {
   const banners = [
@@ -47,11 +45,13 @@ function Home() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [touchStartX, setTouchStartX] = useState(null);
+  const [touchEndX, setTouchEndX] = useState(null);
 
   const goToNext = () => {
     setIsTransitioning(true);
     setTimeout(() => {
-      setCurrentIndex((prevIndex) => 
+      setCurrentIndex((prevIndex) =>
         prevIndex === banners.length - 1 ? 0 : prevIndex + 1
       );
       setIsTransitioning(false);
@@ -61,12 +61,35 @@ function Home() {
   const goToPrev = () => {
     setIsTransitioning(true);
     setTimeout(() => {
-      setCurrentIndex((prevIndex) => 
+      setCurrentIndex((prevIndex) =>
         prevIndex === 0 ? banners.length - 1 : prevIndex - 1
       );
       setIsTransitioning(false);
     }, 300);
   };
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.changedTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    setTouchEndX(e.changedTouches[0].clientX);
+  };
+
+  useEffect(() => {
+    if (touchStartX !== null && touchEndX !== null) {
+      const distance = touchStartX - touchEndX;
+      if (Math.abs(distance) > 50) {
+        if (distance > 0) {
+          goToNext(); // swipe left
+        } else {
+          goToPrev(); // swipe right
+        }
+      }
+      setTouchStartX(null);
+      setTouchEndX(null);
+    }
+  }, [touchEndX]);
 
   useEffect(() => {
     const interval = setInterval(goToNext, 5000);
@@ -76,7 +99,11 @@ function Home() {
   return (
     <div className="home-container">
       {/* Main Banner Section */}
-      <section className="home-banner">
+      <section
+        className="home-banner"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         {/* Background Carousel */}
         <div className="banner-bg-carousel">
           {banners.map((banner, index) => (
@@ -85,7 +112,9 @@ function Home() {
               className={`banner-bg-image ${index === currentIndex ? "active" : ""} ${
                 isTransitioning && index === currentIndex ? "transitioning" : ""
               }`}
-              style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${banner.image})` }}
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${banner.image})`
+              }}
             />
           ))}
         </div>
@@ -105,10 +134,6 @@ function Home() {
             <span className="english-subtitle">{banners[currentIndex].englishTitle}</span>
           </h1>
           <p className="tagline">{banners[currentIndex].tagline}</p>
-          <div className="home-buttons">
-           
-           
-          </div>
         </div>
 
         {/* Dot Indicators */}
@@ -122,21 +147,23 @@ function Home() {
             />
           ))}
         </div>
-
-       
       </section>
+
+      {/* Thought Below Banner */}
+      <div className="thought-container">
+        <p>🎓 <strong>ಸಮರ್ಪಣೆಯೊಂದಿಗೆ ಕಲಿಯಿರಿ, ಜ್ಞಾನದೊಂದಿಗೆ ಬೆಳೆಯಿರಿ.</strong></p>
+      </div>
 
       {/* Page Sections */}
       <div className="page-content">
-        <About/>
+        <About />
         <Teachers />
         <Gallery />
-        <AnkurPublication/>
+        <AnkurPublication />
         <Achievements />
         <ImageComparison />
         <VideoSection />
         <SuccessStories />
-        
         <CommentSection />
       </div>
     </div>
