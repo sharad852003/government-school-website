@@ -88,7 +88,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Our School. All rights reserved.</p>
-        <p>Designed & Developed by Sharad patil | DSATM, Bangalore</p>
+        <p>Designed & Developed by Sharad Shivaji Patil | DSATM, Bangalore</p>
       </div>
     </footer>
   );

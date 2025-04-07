@@ -220,3 +220,23 @@
     transform: translateY(0);
   }
 }
+/* Support banner dark mode overlay adjustments */
+body.dark-mode .banner-bg-image {
+  filter: brightness(0.8);
+}
+
+/* Text readability */
+body.dark-mode .home-content h1,
+body.dark-mode .home-content p,
+body.dark-mode .thought-container {
+  color: #f9fafb;
+}
+
+/* Dot active state in dark mode */
+body.dark-mode .dot.active {
+  background-color: #facc15;
+}
+
+body.dark-mode .dot {
+  background-color: #4b5563;
+}

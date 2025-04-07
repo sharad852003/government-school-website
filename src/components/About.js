@@ -98,18 +98,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* School Excellence Section */}
-      <section className="school-excellence">
-        <div className="section-container">
-          <h2 className="section-title">
-            <span className="kannada-highlight">ನಮ್ಮ ಶಾಲೆಯ ವಿಶೇಷತೆಗಳು</span>
-            <span className="english-text">Our School's Excellence</span>
-          </h2>
-          <div className="excellence-cards">
-            {/* Excellence cards placeholder */}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Testimonial Section */}
       <section className="testimonial-section">

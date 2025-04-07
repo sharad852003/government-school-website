@@ -160,7 +160,7 @@ function Home() {
         <Teachers />
         <Gallery />
         <AnkurPublication />
-        <Achievements />
+        
         <ImageComparison />
         <VideoSection />
         <SuccessStories />
